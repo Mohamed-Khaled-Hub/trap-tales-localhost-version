@@ -1,0 +1,33 @@
+@import '../utils/Utils.css';
+
+.loading {
+    height: var(--loading-height);
+    aspect-ratio: 5;
+    display: grid;
+
+    &::before,
+    &::after {
+        content: '';
+        grid-area: 1 / 1;
+        background:
+            var(--loading-background) left,
+            var(--loading-background) right;
+        background-size: 20% 100%;
+        animation: loading var(--loading-duration) infinite;
+    }
+
+    &::after {
+        background:
+            var(--loading-background) calc(1 * 100% / 3),
+            var(--loading-background) calc(2 * 100% / 3);
+        background-size: 20% 100%;
+        animation-direction: reverse;
+    }
+}
+
+@keyframes loading {
+    80%,
+    100% {
+        transform: rotate(0.5turn);
+    }
+}

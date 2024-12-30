@@ -1,0 +1,25 @@
+@import '../utils/Utils.css';
+
+div.object-container {
+    margin: calc(var(--padding-m) * -1);
+
+    div.artist-header,
+    div.album-header,
+    div.track-header {
+        height: fit-content;
+        min-height: var(--object-header-height);
+        padding: var(--padding-m) var(--padding-l);
+        border-bottom: var(--border-xs) solid light-dark(var(--d1), var(--d3));
+    }
+
+    div.artist-main,
+    div.album-main,
+    div.track-main {
+        padding: var(--padding-l);
+
+        div.object-main-container {
+            max-width: var(--container-max-width);
+            margin: 0 auto;
+        }
+    }
+}

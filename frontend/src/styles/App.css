@@ -1,0 +1,17 @@
+@import 'utils/Utils.css';
+@import 'utils/GlobalClasses.css';
+@import 'utils/ModernNormalize.css';
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    line-height: calc(1em + 0.5rem);
+    font-family: 'Fira Sans Condensed', 'Noto Sans Arabic', serif;
+    color: inherit;
+}
+
+body {
+    background: light-dark(var(--l2), var(--d4));
+    color: light-dark(var(--d5), var(--l1));
+}

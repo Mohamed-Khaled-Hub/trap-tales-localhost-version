@@ -1,0 +1,13 @@
+@import '../utils/Utils.css';
+
+div.something-went-wrong {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--padding-m);
+    margin: 0 auto;
+
+    h1 {
+        text-align: center;
+    }
+}

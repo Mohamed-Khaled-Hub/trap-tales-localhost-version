@@ -1,0 +1,104 @@
+@import '../utils/Utils.css';
+
+div.youtube-video-container[class*='closed'] {
+    padding: 0;
+    background: none;
+    box-shadow: none;
+
+    button.titlebar-button {
+        display: none;
+
+        * {
+            display: none;
+        }
+    }
+}
+
+div.youtube-video-container[class*='youtube-in-page'] {
+    left: unset;
+    right: unset;
+    bottom: unset;
+    padding: unset;
+    box-shadow: none;
+    position: relative;
+    border-radius: unset;
+
+    button#close-button {
+        display: none;
+
+        * {
+            display: none;
+        }
+    }
+}
+
+div.youtube-video-container {
+    width: var(--youtube-iframe-width);
+    max-width: 100%;
+    position: fixed;
+    bottom: var(--padding-s);
+    right: var(--padding-m);
+    display: flex;
+    align-items: end;
+    flex-direction: column;
+    gap: var(--padding-s);
+    z-index: var(--youtube-z-index);
+    padding: var(--padding-s) var(--padding-m) var(--padding-m);
+    border-radius: var(--border-radius-xs);
+    background: light-dark(var(--l2), var(--d4));
+    box-shadow: var(--youtube-container-box-shadow);
+
+    div.youtube-titlebar {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    button {
+        &.titlebar-button {
+            padding: 0;
+
+            img {
+                width: calc(var(--svg-width) * 0.75);
+            }
+        }
+
+        &.youtube-button {
+            background: var(--youtube-color);
+            padding: var(--padding-m);
+            border-radius: 50%;
+            display: none;
+            width: fit-content;
+
+            img {
+                width: var(--youtube-icon-width);
+            }
+        }
+    }
+
+    iframe {
+        border: 0;
+        width: 100%;
+        background: var(--d5);
+        border-radius: var(--border-radius-xs);
+        aspect-ratio: var(--youtube-iframe-aspect-ratio);
+    }
+}
+
+@media (max-width: 500px) {
+    div.youtube-video-container {
+        width: calc(100% - var(--padding-m) * 2);
+        left: var(--padding-m);
+        bottom: var(--padding-m);
+    }
+}
+
+@media (max-height: 400px) {
+    div.youtube-video-container {
+        margin-top: var(--padding-m);
+
+        div.youtube-titlebar {
+            display: none;
+        }
+    }
+}

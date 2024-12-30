@@ -1,0 +1,12 @@
+@import '../utils/Utils.css';
+
+div.main {
+    padding: var(--padding-m);
+    margin-top: var(--nav-height);
+}
+
+@media (max-width: 500px) {
+    div.main {
+        margin-top: var(--nav-height-mobile);
+    }
+}

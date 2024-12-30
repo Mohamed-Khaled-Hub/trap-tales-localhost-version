@@ -1,0 +1,146 @@
+/* Fonts */
+/* Fira Sans Condensed */
+@font-face {
+    font-family: 'Fira Sans Condensed';
+    src: url('../../../public/assets/fonts/Fira Sans Condensed/FiraSansCondensed.ttf');
+}
+
+/* Noto Sans Arabic */
+@font-face {
+    font-family: 'Noto Sans Arabic';
+    src: url('../../../public/assets/fonts/Noto Sans Arabic/NotoSansArabic.ttf');
+}
+
+/* Nova Square */
+@font-face {
+    font-family: 'Nova Square';
+    src: url('../../../public/assets/fonts/Nova Square/NovaSquare.ttf');
+}
+
+/* Variables */
+:root {
+    color-scheme: light dark;
+
+    /* Dimensions */
+    --nav-height: 3.125rem;
+    --nav-height-mobile: 4.6875rem;
+    --svg-width: 1.25rem;
+    --button-min-height: 1.25rem;
+    --logo-width: 6.875rem;
+    --loading-height: 0.9375rem;
+    --search-input-height: 1.5rem;
+    --search-container-max-width: 18.75rem;
+    --card-width: 15.625rem;
+    --container-max-width: 78.125rem;
+    --h1-type-title-width: 8.125rem;
+    --object-header-height: 18.75rem;
+    --object-image-width: 15.625rem;
+    --scrollbar-height: 0.625rem;
+    --home-section-height: 45.25rem;
+    --github-logo-width: 6.25rem;
+    --aka-max-width: 43.75rem;
+    --discs-container-width: 18.75rem;
+    --lyrics-container-max-width: 25rem;
+    --youtube-iframe-width: 30rem;
+    --youtube-icon-width: 1.875rem;
+    --form-input-height: 1.75rem;
+
+    /* Backgrounds */
+    --loading-background: no-repeat
+        radial-gradient(
+            farthest-side,
+            light-dark(var(--d5), var(--l1)) 90%,
+            transparent
+        );
+    --logo-slogan-background: rgba(10, 10, 10, 0.75);
+
+    /* Font Size */
+    --font-size-m: 1.25rem;
+    --font-size-l: 1.875rem;
+    --font-size-xl: 2.875rem;
+    --font-size-2xl: 3.75rem;
+    --font-size-3xl: 4.375rem;
+    --font-size-4xl: 5rem;
+
+    /* Padding */
+    --padding-3xs: 0.15625rem;
+    --padding-2xs: 0.1875rem;
+    --padding-xs: 0.3125rem;
+    --padding-s: 0.625rem;
+    --padding-m: 0.9375rem;
+    --padding-l: 1.25rem;
+    --padding-xl: 3.125rem;
+    --padding-5xl: 28rem;
+
+    /* Border */
+    --border-loading: 0.3125rem;
+    --border-xs: 0.0625rem;
+
+    /* Border Radius */
+    --border-radius-2xs: 0.15625rem;
+    --border-radius-xs: 0.3125rem;
+    --border-radius-s: 0.625rem;
+    --border-radius-m: 0.9375rem;
+
+    /* Box Shadow */
+    --artist-image-box-shadow: 0 0 3.125rem 0.625rem rgba(10, 10, 10, 0.5);
+    --youtube-container-box-shadow: 0 0 3.125rem 0.625rem rgba(10, 10, 10, 0.75);
+
+    /* Aspect Ratios */
+    --logo-aspect-ratio: 110 / 21.58;
+    --background-video-aspect-ratio: 4 / 3;
+    --youtube-iframe-aspect-ratio: 1280 / 720;
+
+    /* Z-Index */
+    --youtube-z-index: 998;
+    --nav-z-index: 999;
+    --background-video-z-index: -999;
+
+    /* Brightness */
+    --brightness-hover: brightness(1.1);
+    --brightness-active: brightness(0.9);
+
+    /* Transition Duration */
+    --loading-duration: 1s;
+    --duration: 0.2s;
+
+    /* Backdrop Filter: LEAVE IT AS px */
+    --backdrop-blur-s: 3px;
+    --backdrop-blur-m: 5px;
+
+    /* Dark Palette */
+    --d1: #858585;
+    --d2: #292929;
+    --d3: #252422;
+    --d4: #151514;
+    --d5: #0a0a0a;
+    --d6: #3e3e3e;
+
+    /* Light Palette */
+    --l1: #fefcfb;
+    --l2: #f5f5f5;
+    --l3: #d6d6d6;
+    --l4: #c2c2c2;
+    --l5: #adadad;
+    --l6: #999999;
+
+    /* APIs Colors */
+    --spotify-color: #1ed760;
+    --genius-color: #ffff64;
+    --youtube-color: #cd201f;
+}
+
+/* Normalization */
+html {
+    scroll-behavior: smooth;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+    user-select: none;
+}

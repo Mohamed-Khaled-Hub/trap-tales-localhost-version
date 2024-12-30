@@ -1,0 +1,30 @@
+@import '../utils/Utils.css';
+
+form#search-form {
+    max-width: var(--search-container-max-width);
+    width: 100%;
+    display: flex;
+    position: relative;
+
+    input {
+        height: var(--search-input-height);
+        width: 100%;
+        border: none;
+        outline: none;
+        border-radius: var(--border-radius-2xs);
+        padding: 0 var(--padding-xs);
+        background: light-dark(var(--l3), var(--d2));
+
+        &:focus::placeholder {
+            filter: opacity(0.2);
+        }
+    }
+
+    button {
+        height: var(--search-input-height);
+        width: var(--search-input-height);
+        border: none;
+        position: absolute;
+        right: 0;
+    }
+}

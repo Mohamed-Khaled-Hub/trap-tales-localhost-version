@@ -1,0 +1,11 @@
+@import '../utils/Utils.css';
+
+div.container {
+    max-width: var(--container-max-width);
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--padding-s);
+    padding: var(--padding-s);
+}

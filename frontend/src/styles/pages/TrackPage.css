@@ -1,0 +1,33 @@
+@import '../utils/Utils.css';
+
+div.track-page {
+    div.object-container {
+        div.track-header {
+            div.object-header-container {
+                div.object-info {
+                    div.track-number {
+                        p {
+                            margin-left: calc(var(--padding-3xs) * -1);
+                        }
+                    }
+                }
+            }
+        }
+
+        div.track-main {
+            div.object-main-container {
+                display: flex;
+                align-items: center;
+
+                div.lyrics-container {
+                    text-align: center;
+                    max-width: var(--lyrics-container-max-width);
+
+                    h3.verse-chorus-title {
+                        padding: var(--padding-s) 0;
+                    }
+                }
+            }
+        }
+    }
+}

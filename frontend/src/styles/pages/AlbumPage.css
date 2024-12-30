@@ -1,0 +1,39 @@
+@import '../utils/Utils.css';
+
+div.album-page {
+    div.object-container {
+        div.album-main {
+            div.object-main-container {
+                div.album-tracks {
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: space-evenly;
+
+                    div.discs {
+                        min-width: var(--discs-container-width);
+                        max-width: var(--discs-container-width);
+                        padding: var(--padding-m);
+
+                        h1 {
+                            text-align: center;
+                            filter: opacity(0.5);
+                            padding-bottom: var(--padding-m);
+                        }
+
+                        li {
+                            a {
+                                &:hover {
+                                    text-decoration: underline;
+                                }
+                            }
+
+                            &::marker {
+                                font-weight: bold;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

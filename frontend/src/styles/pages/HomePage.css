@@ -1,0 +1,115 @@
+@import '../utils/Utils.css';
+
+div.home-page {
+    div.section {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: var(--padding-l);
+        padding: var(--padding-l);
+        margin: calc(var(--padding-m) * -1);
+        height: calc(var(--home-section-height) - var(--nav-height));
+        position: relative;
+
+        div.logo-slogan-container {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+            padding: var(--padding-l);
+            border-radius: var(--border-radius-s);
+            background: var(--logo-slogan-background);
+            backdrop-filter: blur(var(--backdrop-blur-m));
+        }
+
+        &:first-of-type {
+            h1 {
+                a {
+                    color: var(--l1) !important;
+                }
+            }
+
+            color: var(--l1) !important;
+        }
+
+        * {
+            text-align: center;
+            user-select: none;
+        }
+
+        h1 {
+            font-size: var(--font-size-4xl);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+
+            a {
+                font-family: 'Nova Square', serif;
+            }
+        }
+
+        h2 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            font-size: var(--font-size-2xl);
+            gap: var(--padding-l);
+
+            a.github {
+                img {
+                    width: var(--github-logo-width);
+                }
+            }
+        }
+
+        a {
+            &.spotify {
+                color: var(--spotify-color);
+            }
+
+            &.genius {
+                color: var(--genius-color);
+            }
+        }
+
+        div {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: var(--padding-m);
+            flex-wrap: wrap;
+            font-size: var(--font-size-xl);
+
+            a {
+                font-weight: bold;
+            }
+        }
+
+        p {
+            font-size: var(--font-size-l);
+        }
+    }
+
+    @media (max-width: 500px) {
+        height: calc(var(--home-section-height) - var(--nav-height-mobile));
+    }
+
+    @media (max-width: 400px) {
+        h1 {
+            font-size: var(--font-size-3xl) !important;
+        }
+
+        div.section {
+            &:last-of-type {
+                padding: var(--padding-5xl) var(--padding-xl);
+
+                div {
+                    flex-direction: column;
+                }
+            }
+        }
+    }
+}

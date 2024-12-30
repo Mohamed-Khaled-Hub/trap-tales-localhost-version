@@ -1,0 +1,163 @@
+@import 'Utils.css';
+
+#loading-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    max-width: 100%;
+}
+
+.faded-title {
+    text-align: center;
+    font-weight: normal;
+    user-select: none;
+    filter: opacity(0.5);
+    padding-bottom: var(--padding-s);
+}
+
+.svg-standard {
+    width: var(--svg-width);
+    min-width: var(--svg-width);
+}
+
+.logo {
+    width: var(--logo-width);
+    min-width: var(--logo-width);
+    aspect-ratio: var(--logo-aspect-ratio);
+}
+
+.object-header-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: var(--padding-m);
+}
+
+.object-img {
+    overflow: hidden;
+    width: var(--object-image-width);
+    border-radius: var(--border-radius-s);
+    box-shadow: var(--artist-image-box-shadow);
+
+    img {
+        width: 100%;
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+    }
+}
+
+.object-info {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: var(--padding-xs);
+
+    h1.object-name {
+        text-align: center;
+    }
+
+    div.aka,
+    div.links,
+    div.genres,
+    div.followers,
+    div.track-number,
+    div.total-tracks {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        gap: var(--padding-xs);
+        text-align: center;
+        font-weight: bold;
+
+        h4 {
+            display: flex;
+
+            &:first-of-type {
+                user-select: none;
+                font-weight: normal;
+                filter: opacity(0.5);
+            }
+        }
+
+        p {
+            user-select: none;
+            font-weight: normal;
+            filter: opacity(0.5);
+            margin-left: var(--padding-xs);
+        }
+
+        a {
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    div.track-number {
+        h4 {
+            user-select: none;
+            font-weight: normal;
+            filter: opacity(0.5);
+        }
+    }
+
+    div.by {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: var(--padding-xs);
+
+        h4 {
+            user-select: none;
+            font-weight: normal;
+            filter: opacity(0.5);
+        }
+
+        div.by-link {
+            display: flex;
+
+            a {
+                font-weight: bold;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+
+            p {
+                user-select: none;
+            }
+        }
+    }
+
+    div.release-date {
+        display: flex;
+        gap: var(--padding-xs);
+
+        h4:first-of-type {
+            user-select: none;
+            font-weight: normal;
+            filter: opacity(0.5);
+        }
+    }
+}
+
+.object-main-container {
+    display: flex;
+    flex-direction: column;
+
+    h1.section-title {
+        text-align: center;
+        padding-top: var(--padding-l);
+
+        &:first-of-type {
+            padding-top: 0;
+        }
+    }
+}

@@ -1,0 +1,52 @@
+@import '../utils/Utils.css';
+
+div.artist-page {
+    div.object-container {
+        div.artist-header {
+            div.object-header-container {
+                div.object-img {
+                    border-radius: 50%;
+                }
+
+                div.aka {
+                    max-width: var(--aka-max-width);
+                }
+            }
+        }
+
+        div.artist-main {
+            div.object-main-container {
+                div.albums,
+                div.top-tracks {
+                    display: flex;
+                    flex-direction: column;
+                    gap: var(--padding-m);
+                    max-width: var(--container-max-width);
+
+                    div.scroll-container {
+                        display: flex;
+                        overflow-x: auto;
+                        gap: var(--padding-s);
+                        padding: var(--padding-3xs) var(--padding-3xs)
+                            var(--padding-m) var(--padding-3xs);
+                        margin-top: var(--padding-m);
+                        border-radius: var(--border-radius-m);
+
+                        &::-webkit-scrollbar {
+                            height: var(--scrollbar-height);
+                        }
+
+                        &::-webkit-scrollbar-track {
+                            background: transparent;
+                        }
+
+                        &::-webkit-scrollbar-thumb {
+                            background: light-dark(var(--d2), var(--d6));
+                            border-radius: var(--border-radius-m);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

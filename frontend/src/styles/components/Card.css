@@ -1,0 +1,60 @@
+@import '../utils/Utils.css';
+
+a.card {
+    color: inherit;
+    width: var(--card-width);
+    border-radius: var(--border-radius-s);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    background: linear-gradient(
+        to bottom,
+        light-dark(var(--l2), var(--d2)) 50%,
+        light-dark(var(--l4), var(--d5))
+    );
+    overflow: hidden;
+    border: var(--border-xs) solid light-dark(var(--d1), var(--d3));
+
+    * {
+        user-select: none;
+    }
+
+    img.card-object-img {
+        width: 100%;
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+        border-bottom: var(--border-xs) solid light-dark(var(--d1), var(--d3));
+    }
+
+    h1.object-name {
+        width: 80%;
+        padding: var(--padding-m);
+        text-align: center;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+
+    h2.object-metadata {
+        text-align: center;
+        width: 80%;
+        filter: opacity(0.75);
+        padding-bottom: var(--padding-m);
+        font-size: var(--font-size-m);
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+
+        p {
+            filter: opacity(0.5);
+            display: inline;
+        }
+    }
+
+    &:has(h2.object-metadata) {
+        h1.object-name {
+            padding: var(--padding-s) var(--padding-m);
+        }
+    }
+}

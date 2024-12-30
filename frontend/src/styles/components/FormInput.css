@@ -1,0 +1,15 @@
+@import '../utils/Utils.css';
+
+input.form-input {
+    height: var(--form-input-height);
+    width: 100%;
+    border: none;
+    outline: none;
+    border-radius: var(--border-radius-2xs);
+    padding: 0 var(--padding-xs);
+    background: light-dark(var(--l3), var(--d2));
+
+    &:focus::placeholder {
+        filter: opacity(0.2);
+    }
+}
